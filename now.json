@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "github": {
+    "enabled": true,
+    "silent": true
+  },
+  "builds": [
+    {
+      "src": "**/*.go",
+      "use": "@vercel/go"
+    }
+  ],
+  "routes": [
+    {
+      "handle": "filesystem"
+    },
+    { "src": "/ping", "dest": "main.go" }
+  ]
+}
